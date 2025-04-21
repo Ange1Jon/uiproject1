@@ -69,11 +69,20 @@ function startLesson() {
     showLesson();
 }
 
+function goHome() {
+    document.getElementById("lesson").classList.add("d-none");
+    document.getElementById("final-quiz").classList.add("d-none");
+    document.getElementById("results").classList.add("d-none");
+    document.getElementById("home").classList.remove("d-none");
+    currentLesson = 0;
+    userAnswers = [];
+}
+
 function showLesson() {
     const lesson = lessons[currentLesson];
-    const progress = ((currentLesson + 1) / lessons.length) * 100;
+    const progress = ((currentLesson) / lessons.length) * 100;
     document.getElementById("progress-bar").style.width = progress + "%";
-    document.getElementById("progress-text").innerText = `Lesson ${currentLesson + 1} of ${lessons.length}`;
+    document.getElementById("progress-text").innerText = `Lesson ${currentLesson + 1} of ${lessons.length} (${Math.round(progress)}%)`;
     document.getElementById("lesson-title").innerText = lesson.title;
     document.getElementById("lesson-description").innerText = lesson.description;
     document.getElementById("video-placeholder").innerText = lesson.video;
