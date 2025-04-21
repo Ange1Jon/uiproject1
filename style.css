@@ -1,28 +1,87 @@
 
 body {
-    background: #fdf6e3 url('https://miro.medium.com/v2/resize:fit:1400/0*paacCE8Pzp53_824') repeat;
+    background: url('https://miro.medium.com/v2/resize:fit:1400/0*paacCE8Pzp53_824') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000;
 }
+
 .container {
     margin-top: 50px;
 }
+#home {
+    background: url('BBC9B2AA-E40F-4C7F-9930-20E345549D0A.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    padding: 30px;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+#home button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background: #ff6f00;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#home button:hover {
+    background: #ff8f00;
+    transform: scale(1.05);
+}
+#lesson,
+#final-quiz,
+#results {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
 .progress-bar-text {
     text-align: center;
     margin-top: 10px;
-}
-.question {
     font-weight: bold;
 }
+
+.question {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 .video-placeholder {
-    background: #ddd;
+    background: #eee;
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
     border: 2px dashed #999;
 }
-#lesson {
-    background: rgba(255, 255, 255, 0.85); /* light background for contrast */
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    margin: 10px 5px;
 }
