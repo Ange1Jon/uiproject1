@@ -1,0 +1,28 @@
+
+body {
+    background: #fdf6e3 url('https://miro.medium.com/v2/resize:fit:1400/0*paacCE8Pzp53_824') repeat;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+.container {
+    margin-top: 50px;
+}
+.progress-bar-text {
+    text-align: center;
+    margin-top: 10px;
+}
+.question {
+    font-weight: bold;
+}
+.video-placeholder {
+    background: #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px dashed #999;
+}
+#lesson {
+    background: rgba(255, 255, 255, 0.85); /* light background for contrast */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
