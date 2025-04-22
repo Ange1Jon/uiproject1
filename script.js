@@ -5,9 +5,9 @@ const lessons = [
         description: "Your feet should be shoulder-width apart. Knees bent. Balance is key.",
         video: "[INSERT VIDEO HERE]",
         quiz: {
-            question: "What is the proper stance?",
-            options: ["Feet together", "Feet wide apart", "One foot in front of the other", "Shoulder-width apart"],
-            correct: 3
+            question: "What's the best stance to keep your shot stable and balanced?",
+            options: ["Feet touching each other", "Feet shoulder-width apart with knees bent", "One foot way ahead of the other", "Standing stiff and tall"],
+            correct: 1
         }
     },
     {
@@ -15,8 +15,8 @@ const lessons = [
         description: "Shooting hand under the ball, guide hand on the side.",
         video: "[INSERT VIDEO HERE]",
         quiz: {
-            question: "Where should your shooting hand go?",
-            options: ["On top", "On the side", "Under the ball", "Behind the ball"],
+            question: "Which hand placement helps you guide the ball without messing up the shot?",
+            options: ["Both hands under the ball", "Guide hand under, shooting hand on top", "Shooting hand under, guide hand on the side", "Thumbs pressed together in the middle"],
             correct: 2
         }
     },
@@ -25,9 +25,9 @@ const lessons = [
         description: "Push up, elbow under the ball, release at the top of your jump.",
         video: "[INSERT VIDEO HERE]",
         quiz: {
-            question: "When should you release the ball?",
-            options: ["As you start your jump", "At the top of your jump", "Before you jump", "When landing"],
-            correct: 1
+            question: "When should you release the basketball for best accuracy and arc?",
+            options: ["Before jumping", "While falling down", "At the top of your jump", "Right after catching it"],
+            correct: 2
         }
     },
     {
@@ -35,9 +35,9 @@ const lessons = [
         description: "Snap your wrist and hold the gooseneck position.",
         video: "[INSERT VIDEO HERE]",
         quiz: {
-            question: "What does follow-through look like?",
-            options: ["Arms down", "Fists clenched", "Wrist snapped, arm extended", "No movement"],
-            correct: 2
+            question: "What does a solid follow-through look like?",
+            options: ["Hands to the side", "Wrists snapped with fingers pointing down like reaching in a cookie jar", "Both hands by your ears", "Straight arms with fists clenched"],
+            correct: 1
         }
     },
     {
@@ -45,19 +45,19 @@ const lessons = [
         description: "Avoid thumbing the ball, leaning back, or not jumping.",
         video: "[INSERT VIDEO HERE]",
         quiz: {
-            question: "Which of these is a common mistake?",
-            options: ["Balanced stance", "Elbow under ball", "Not jumping", "Guide hand on side"],
+            question: "Which habit messes up your shot form the most?",
+            options: ["Using your legs for power", "Snapping your wrist", "Leaning backward and thumbing the ball", "Jumping straight up"],
             correct: 2
         }
     }
 ];
 
 const finalQuizQuestions = [
-    { q: "What’s the most important part of your stance?", a: 3, key: "Stance" },
-    { q: "Where should your guide hand go?", a: 1, key: "Hand Placement" },
-    { q: "When should you release the ball?", a: 1, key: "Shooting Motion" },
-    { q: "What does a good follow-through look like?", a: 2, key: "Follow Through" },
-    { q: "Which is NOT a common mistake?", a: 0, key: "Common Mistakes" }
+    { q: "What kind of stance helps you stay balanced before shooting?", a: 1, key: "Stance" },
+    { q: "Where should your guide hand be while shooting?", a: 2, key: "Hand Placement" },
+    { q: "When is the perfect time to release the ball during your jump?", a: 2, key: "Shooting Motion" },
+    { q: "How should your hands finish after a good follow-through?", a: 1, key: "Follow Through" },
+    { q: "Which of these is a shooting mistake you want to avoid?", a: 2, key: "Common Mistakes" }
 ];
 
 let currentLesson = 0;
@@ -115,17 +115,28 @@ function prevLesson() {
 
 function showFinalQuiz() {
     const quizContainer = document.getElementById("final-questions");
-    quizContainer.innerHTML = finalQuizQuestions.map((q, i) => `
+    quizContainer.innerHTML = finalQuizQuestions.map((q, i) => {
+        const options = lessons[i].quiz.options;
+        return `
         <div class="mt-3">
             <p><strong>${q.q}</strong></p>
-            ${["Balance", "On the side", "At the top", "Snap wrist", "Balanced stance"].map((opt, j) =>
+            ${options.map((opt, j) =>
                 `<div><input type="radio" name="final-${i}" value="${j}"> ${opt}</div>`
             ).join("")}
         </div>
-    `).join("");
+        `;
+    }).join("");
 }
 
 function submitFinalQuiz() {
+    const feedbackMessages = {
+        "Stance": "Work on your stance – balance starts from the ground up. Revisit Lesson 1!",
+        "Hand Placement": "Check your grip – your guide hand is there to help, not mess up your shot. Back to Lesson 2!",
+        "Shooting Motion": "Your timing is off. Release at the peak of your jump for that smooth arc. Revisit Lesson 3!",
+        "Follow Through": "You're missing that shooter’s finish. Snap that wrist like you're reaching into a cookie jar – Lesson 4’s got you.",
+        "Common Mistakes": "Some habits kill your shot. Let’s clean them up – jump into Lesson 5 again."
+    };
+
     const feedback = {};
     let score = 0;
     finalQuizQuestions.forEach((q, i) => {
@@ -142,7 +153,7 @@ function submitFinalQuiz() {
     document.getElementById("final-score").innerText = `You got ${score} out of ${finalQuizQuestions.length} correct.`;
 
     const feedbackList = Object.keys(feedback).map(k =>
-        `<li>You should revisit: <strong>${k}</strong></li>`
+        `<li>${feedbackMessages[k]}</li>`
     ).join("");
     document.getElementById("final-feedback").innerHTML = feedbackList || "<li>Great job! You’re ready to hit the court.</li>";
 }
