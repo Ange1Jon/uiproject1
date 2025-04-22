@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson {{ lesson_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .top-nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 30px 0 30px;
+        }
+        .top-nav .btn {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="{{ url_for('home') }}" class="btn btn-danger">🏠 Home</a>
+    </div>
+    <div class="container" id="lesson">
+        <div class="mb-3">
+            <div class="progress" style="height: 20px;">
+                <div class="progress-bar" style="width: {{ ((lesson_id-1) / total) * 100 }}%;">
+                    {{ ((lesson_id-1) / total * 100)|round(0) }}%
+                </div>
+            </div>
+            <div class="text-center mt-1"><strong>Lesson {{ lesson_id }} of {{ total }}</strong></div>
+        </div>
+        <h2>{{ lesson.title }}</h2>
+        <div class="video-placeholder">{{ lesson.video }}</div>
+        <p>{{ lesson.description }}</p>
+
+        <div class="question">{{ lesson.question }}</div>
+        <form method="get" action="{{ url_for('learn', lesson_id=lesson_id+1) if lesson_id < total else url_for('quiz', quiz_id=1) }}">
+            {% for opt in lesson.options %}
+                <div><input type="radio" name="quiz" value="{{ loop.index0 }}"> {{ opt }}</div>
+            {% endfor %}
+            <div class="mt-3">
+                {% if lesson_id > 1 %}
+                    <a href="{{ url_for('learn', lesson_id=lesson_id-1) }}" class="btn btn-outline-secondary">⬅ Back</a>
+                {% endif %}
+                <button type="submit" class="btn btn-primary">Next ➡</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

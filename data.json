@@ -1,0 +1,126 @@
+{
+    "lessons": [
+        {
+            "title": "Stance",
+            "description": "Your feet should be shoulder-width apart. Knees bent. Balance is key.",
+            "video": "[INSERT VIDEO HERE]",
+            "question": "What's the best stance to keep your shot stable and balanced?",
+            "options": [
+                "Feet touching each other",
+                "Feet shoulder-width apart with knees bent",
+                "One foot way ahead of the other",
+                "Standing stiff and tall"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "Hand Placement",
+            "description": "Shooting hand under the ball, guide hand on the side.",
+            "video": "[INSERT VIDEO HERE]",
+            "question": "Which hand placement helps you guide the ball without messing up the shot?",
+            "options": [
+                "Both hands under the ball",
+                "Guide hand under, shooting hand on top",
+                "Shooting hand under, guide hand on the side",
+                "Thumbs pressed together in the middle"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "Shooting Motion",
+            "description": "Push up, elbow under the ball, release at the top of your jump.",
+            "video": "[INSERT VIDEO HERE]",
+            "question": "When should you release the basketball for best accuracy and arc?",
+            "options": [
+                "Before jumping",
+                "While falling down",
+                "At the top of your jump",
+                "Right after catching it"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "Follow Through",
+            "description": "Snap your wrist and hold the gooseneck position.",
+            "video": "[INSERT VIDEO HERE]",
+            "question": "What does a solid follow-through look like?",
+            "options": [
+                "Hands to the side",
+                "Wrists snapped with fingers pointing down like reaching in a cookie jar",
+                "Both hands by your ears",
+                "Straight arms with fists clenched"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "Common Mistakes",
+            "description": "Avoid thumbing the ball, leaning back, or not jumping.",
+            "video": "[INSERT VIDEO HERE]",
+            "question": "Which habit messes up your shot form the most?",
+            "options": [
+                "Using your legs for power",
+                "Snapping your wrist",
+                "Leaning backward and thumbing the ball",
+                "Jumping straight up"
+            ],
+            "correct": 2
+        }
+    ],
+    "final_quiz": [
+        {
+            "q": "What\u2019s a great warm-up before practicing your shot?",
+            "options": [
+                "Stretching and balance drills",
+                "3-point shooting only",
+                "Jumping jacks only",
+                "Lifting heavy weights"
+            ],
+            "correct": 0,
+            "key": "Prep"
+        },
+        {
+            "q": "What should your eyes focus on when you shoot?",
+            "options": [
+                "The front of the rim",
+                "The back of the rim",
+                "The ball",
+                "The scoreboard"
+            ],
+            "correct": 1,
+            "key": "Focus"
+        },
+        {
+            "q": "Which part of the body should generate most of the shooting power?",
+            "options": [
+                "Wrist",
+                "Shoulders",
+                "Legs",
+                "Fingertips"
+            ],
+            "correct": 2,
+            "key": "Power"
+        },
+        {
+            "q": "If your shot keeps falling short, what\u2019s most likely the issue?",
+            "options": [
+                "Too much arc",
+                "Not enough leg power",
+                "Too much follow-through",
+                "Focusing on the rim"
+            ],
+            "correct": 1,
+            "key": "Short Shot"
+        },
+        {
+            "q": "Which motion should be smooth and consistent for great shooting?",
+            "options": [
+                "Breathing",
+                "Jumping",
+                "Follow-through",
+                "Dribbling"
+            ],
+            "correct": 2,
+            "key": "Motion"
+        }
+    ]
+}

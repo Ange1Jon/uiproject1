@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basketball Learning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container text-center" id="home">
+        <h1 class="display-4">How to Shoot a Basketball</h1>
+        <p class="lead">Ever wanted to impress your friends? No one ever picked you for a pickup game? Welcome to your safe place.</p>
+        <a href="{{ url_for('learn', lesson_id=1) }}" class="btn btn-primary btn-lg">Start Lesson</a>
+    </div>
+</body>
+</html>

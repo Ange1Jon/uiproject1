@@ -1,0 +1,45 @@
+{"timestamp": "2025-04-22T08:47:35.121137", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-22T08:47:39.506412", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:47:50.107822", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-22T08:49:41.900046", "action": "visit_lesson", "data": {"lesson_id": 3}}
+{"timestamp": "2025-04-22T08:49:42.769610", "action": "visit_lesson", "data": {"lesson_id": 4}}
+{"timestamp": "2025-04-22T08:49:43.481012", "action": "visit_lesson", "data": {"lesson_id": 5}}
+{"timestamp": "2025-04-22T08:49:44.126339", "action": "visit_quiz", "data": {"quiz_id": 1}}
+{"timestamp": "2025-04-22T08:49:51.935472", "action": "visit_quiz", "data": {"quiz_id": 2}}
+{"timestamp": "2025-04-22T08:49:55.902817", "action": "visit_quiz", "data": {"quiz_id": 3}}
+{"timestamp": "2025-04-22T08:50:00.334303", "action": "visit_quiz", "data": {"quiz_id": 4}}
+{"timestamp": "2025-04-22T08:50:07.294558", "action": "visit_quiz", "data": {"quiz_id": 5}}
+{"timestamp": "2025-04-22T08:50:13.773665", "action": "submit_quiz", "data": {"answers": [2]}}
+{"timestamp": "2025-04-22T08:50:13.791736", "action": "visit_result", "data": null}
+{"timestamp": "2025-04-22T08:52:17.588215", "action": "visit_quiz", "data": {"quiz_id": 5}}
+{"timestamp": "2025-04-22T08:52:19.443677", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-22T08:52:22.285426", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:52:28.076529", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-22T08:54:13.295075", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-22T08:54:15.337997", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:54:22.118696", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:54:23.255054", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-22T08:54:24.480723", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:55:50.278831", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:56:04.385559", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:56:05.230316", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:56:51.253725", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:56:52.221244", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:56:52.974838", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:56:53.845366", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:56:54.385971", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-22T08:56:55.596299", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:20.317311", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:21.337549", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:22.231274", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:22.789138", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:23.455567", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:23.715078", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:23.900493", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:24.076666", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:24.259232", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:58:24.442445", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:59:13.879348", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:59:15.347456", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:59:34.279142", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-22T08:59:36.680411", "action": "visit_lesson", "data": {"lesson_id": 2}}

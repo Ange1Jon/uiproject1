@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz {{ quiz_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container" id="final-quiz">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <a href="{{ url_for('home') }}" class="btn btn-danger">🏠 Home</a>
+            <h2>Final Quiz Question {{ quiz_id }}</h2>
+        </div>
+        <p>{{ question.q }}</p>
+        <form id="quiz-form">
+            {% for opt in question.options %}
+                <div class="mb-2"><input type="radio" name="quiz" value="{{ loop.index0 }}"> {{ opt }}</div>
+            {% endfor %}
+            {% if quiz_id < total %}
+            <a href="{{ url_for('quiz', quiz_id=quiz_id+1) }}" class="btn btn-primary mt-3">Next ➡</a>
+            {% else %}
+            <button type="button" onclick="submitQuiz()" class="btn btn-success mt-3">Submit Quiz ✅</button>
+            {% endif %}
+        </form>
+    </div>
+    <script>
+        let answers = [];
+
+        function submitQuiz() {
+            const selected = $('input[name="quiz"]:checked').val();
+            if (selected === undefined) {
+                alert("Please select an answer");
+                return;
+            }
+            answers.push(parseInt(selected));
+            $.ajax({
+                url: "{{ url_for('submit_quiz') }}",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ answers }),
+                success: function(res) {
+                    sessionStorage.setItem('score', res.score);
+                    sessionStorage.setItem('feedback', JSON.stringify(res.feedback));
+                    window.location.href = "{{ url_for('result') }}";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

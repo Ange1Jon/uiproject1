@@ -1,0 +1,113 @@
+
+body {
+    background: url('https://miro.medium.com/v2/resize:fit:1400/0*paacCE8Pzp53_824') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#home {
+    background: url('BBC9B2AA-E40F-4C7F-9930-20E345549D0A.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    padding: 30px;
+}
+
+#home h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+#home button,
+.btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#home button {
+    background: #007bff;
+    color: white;
+}
+
+#home button:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-danger:hover {
+    background-color: #b02a37;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e9ecef;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #007bff;
+    transition: width 0.4s ease;
+}
+
+.progress-bar-text {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.question {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.video-placeholder {
+    background: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px dashed #ccc;
+    font-style: italic;
+    color: #666;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+button {
+    margin: 10px 5px;
+}
