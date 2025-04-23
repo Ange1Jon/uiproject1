@@ -1,3 +1,4 @@
+
 body {
     background: url('https://miro.medium.com/v2/resize:fit:1400/0*paacCE8Pzp53_824') no-repeat center center fixed;
     background-size: cover;
@@ -109,51 +110,4 @@ input[type="radio"] {
 
 button {
     margin: 10px 5px;
-}
-
-.feedback {
-    margin-left: 5px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.quiz-option {
-    position: relative;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
-
-.correct-answer {
-    background-color: rgba(40, 167, 69, 0.2);  /* translucent green */
-}
-
-.quiz-review-item {
-    margin-bottom: 30px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-}
-
-.options-review {
-    margin-left: 20px;
-}
-
-.quiz-option {
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 4px;
-}
-
-.correct-answer {
-    background-color: rgba(40, 167, 69, 0.2);
-}
-
-.user-answer {
-    border-left: 4px solid #dc3545;
-    padding-left: 10px;
-}
-
-.user-answer.correct {
-    border-left-color: #28a745;
 }

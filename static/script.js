@@ -1,4 +1,3 @@
-
 const lessons = [
     {
         title: "Stance",
@@ -77,6 +76,7 @@ function goHome() {
     currentLesson = 0;
     userAnswers = [];
 }
+// ... existing code until showLesson function ...
 
 function showLesson() {
     const lesson = lessons[currentLesson];
@@ -87,10 +87,28 @@ function showLesson() {
     document.getElementById("lesson-description").innerText = lesson.description;
     document.getElementById("video-placeholder").innerText = lesson.video;
     document.getElementById("quiz-question").innerText = lesson.quiz.question;
+    
     const optionsHTML = lesson.quiz.options.map((opt, i) =>
-        `<div><input type="radio" name="quiz" value="${i}"> ${opt}</div>`
+        `<div>
+            <input type="radio" name="quiz" value="${i}" onchange="checkAnswer(${i}, ${lesson.quiz.correct})"> 
+            ${opt}
+            <span id="feedback-${i}" class="feedback"></span>
+        </div>`
     ).join("");
+    
     document.getElementById("quiz-options").innerHTML = optionsHTML;
+}
+
+function checkAnswer(selected, correct) {
+    document.querySelectorAll('.feedback').forEach((el, index) => {
+        if (index === correct) {
+            el.innerHTML = ' ✓';
+            el.style.color = 'green';
+        } else {
+            el.innerHTML = ' ✗';
+            el.style.color = 'red';
+        }
+    });
 }
 
 function nextLesson() {
@@ -107,12 +125,6 @@ function nextLesson() {
     }
 }
 
-function prevLesson() {
-    if (currentLesson === 0) return;
-    currentLesson--;
-    showLesson();
-}
-
 function showFinalQuiz() {
     const quizContainer = document.getElementById("final-questions");
     quizContainer.innerHTML = finalQuizQuestions.map((q, i) => {
@@ -121,39 +133,68 @@ function showFinalQuiz() {
         <div class="mt-3">
             <p><strong>${q.q}</strong></p>
             ${options.map((opt, j) =>
-                `<div><input type="radio" name="final-${i}" value="${j}"> ${opt}</div>`
+                `<div>
+                    <input type="radio" name="final-${i}" value="${j}"> 
+                    ${opt}
+                    <span id="final-feedback-${i}-${j}" class="feedback"></span>
+                </div>`
             ).join("")}
         </div>
         `;
     }).join("");
+    
+    quizContainer.innerHTML += `
+        <div class="mt-4">
+            <button onclick="submitFinalQuiz()" class="btn btn-primary">Submit Quiz</button>
+        </div>
+    `;
 }
 
 function submitFinalQuiz() {
-    const feedbackMessages = {
-        "Stance": "Work on your stance – balance starts from the ground up. Revisit Lesson 1!",
-        "Hand Placement": "Check your grip – your guide hand is there to help, not mess up your shot. Back to Lesson 2!",
-        "Shooting Motion": "Your timing is off. Release at the peak of your jump for that smooth arc. Revisit Lesson 3!",
-        "Follow Through": "You're missing that shooter’s finish. Snap that wrist like you're reaching into a cookie jar – Lesson 4’s got you.",
-        "Common Mistakes": "Some habits kill your shot. Let’s clean them up – jump into Lesson 5 again."
-    };
-
-    const feedback = {};
     let score = 0;
+    
     finalQuizQuestions.forEach((q, i) => {
         const selected = document.querySelector(`input[name="final-${i}"]:checked`);
-        if (selected && parseInt(selected.value) === q.a) {
+        if (!selected) return;
+        
+        // Show correct/incorrect for all options
+        document.querySelectorAll(`[id^="final-feedback-${i}"]`).forEach((el, index) => {
+            if (index === q.a) {
+                el.innerHTML = ' ✓';
+                el.style.color = 'green';
+            } else {
+                el.innerHTML = ' ✗';
+                el.style.color = 'red';
+            }
+        });
+
+        if (parseInt(selected.value) === q.a) {
             score++;
-        } else {
-            feedback[q.key] = true;
         }
+
+        // Disable inputs after submission
+        document.querySelectorAll(`input[name="final-${i}"]`).forEach(input => {
+            input.disabled = true;
+        });
     });
 
-    document.getElementById("final-quiz").classList.add("d-none");
-    document.getElementById("results").classList.remove("d-none");
-    document.getElementById("final-score").innerText = `You got ${score} out of ${finalQuizQuestions.length} correct.`;
+    // Show simple score
+    const scoreDiv = document.createElement('div');
+    scoreDiv.className = 'mt-4 text-center';
+    scoreDiv.innerHTML = `
+        <h3>Score: ${score}/${finalQuizQuestions.length}</h3>
+        <button onclick="goHome()" class="btn btn-primary mt-3">Return Home</button>
+    `;
 
-    const feedbackList = Object.keys(feedback).map(k =>
-        `<li>${feedbackMessages[k]}</li>`
-    ).join("");
-    document.getElementById("final-feedback").innerHTML = feedbackList || "<li>Great job! You’re ready to hit the court.</li>";
+    // Remove submit button and add score
+    document.querySelector('button[onclick="submitFinalQuiz()"]').remove();
+    document.getElementById("final-questions").appendChild(scoreDiv);
+}
+
+function goHome() {
+    document.getElementById("lesson").classList.add("d-none");
+    document.getElementById("final-quiz").classList.add("d-none");
+    document.getElementById("home").classList.remove("d-none");
+    currentLesson = 0;
+    userAnswers = [];
 }

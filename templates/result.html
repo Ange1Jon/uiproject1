@@ -1,40 +1,80 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Quiz Results</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .quiz-review-item {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        .quiz-option {
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        .correct-answer {
+            background-color: rgba(40, 167, 69, 0.2);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 30px 0 30px;
+        }
+        .top-nav .btn {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="{{ url_for('home') }}" class="btn btn-danger">🏠 Home</a>
+    </div>
+    
+    <div class="container">
+        <h2>Quiz Results</h2>
+        <div id="score-display" class="mb-4"></div>
+        <div id="quiz-review"></div>
+    </div>
+
     <script>
         window.onload = function() {
             const score = sessionStorage.getItem('score');
-            const feedback = JSON.parse(sessionStorage.getItem('feedback'));
-            document.getElementById("score").innerText = `You got ${score} out of 5 correct.`;
+            const userAnswers = JSON.parse(sessionStorage.getItem('userAnswers') || '[]');
+            
+            // Display score
+            document.getElementById('score-display').innerHTML = `
+                <h3>Your Score: ${score} out of 5</h3>
+            `;
 
-            const list = document.getElementById("feedback");
-            if (feedback.length === 0) {
-                list.innerHTML = "<li>You're a pro! Nothing to fix!</li>";
-            } else {
-                const tips = {
-                    "Stance": "Work on your stance – balance starts from the ground up.",
-                    "Hand Placement": "Check your grip – your guide hand should support, not steer.",
-                    "Shooting Motion": "Release at the top of your jump for the cleanest arc.",
-                    "Follow Through": "Snap your wrist and hold that gooseneck!",
-                    "Common Mistakes": "Avoid bad habits like thumbing or leaning back."
-                };
-                feedback.forEach(item => {
-                    const li = document.createElement("li");
-                    li.textContent = tips[item];
-                    list.appendChild(li);
+            // Fetch quiz data and display review
+            fetch('/get_quiz_data')
+                .then(response => response.json())
+                .then(data => {
+                    const reviewHTML = data.map((question, index) => `
+                        <div class="quiz-review-item">
+                            <p><strong>Question ${index + 1}:</strong> ${question.q}</p>
+                            <div class="options-review">
+                                ${question.options.map((opt, optIndex) => `
+                                    <div class="quiz-option ${optIndex === question.correct ? 'correct-answer' : ''}">
+                                        ${opt}
+                                        ${optIndex === question.correct ? ' (Correct Answer)' : ''}
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `).join('');
+                    
+                    document.getElementById('quiz-review').innerHTML = reviewHTML;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('quiz-review').innerHTML = '<p>Error loading quiz results. Please try again.</p>';
                 });
-            }
-        };
+        }
     </script>
-</head>
-<body>
-    <div class="container" id="results">
-        <h2>Your Results</h2>
-        <p id="score"></p>
-        <ul id="feedback"></ul>
-    </div>
 </body>
 </html>
