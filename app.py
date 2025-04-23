@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 from datetime import datetime
@@ -44,19 +43,19 @@ def submit_quiz():
     answers = request.json.get("answers")
     log_activity("submit_quiz", {"answers": answers})
     score = 0
-    feedback = []
     for i, answer in enumerate(answers):
-        correct = data["final_quiz"][i]["correct"]
-        if answer == correct:
+        if answer == data["final_quiz"][i]["correct"]:
             score += 1
-        else:
-            feedback.append(data["final_quiz"][i]["key"])
-    return jsonify({"score": score, "feedback": feedback})
+    return jsonify({"score": score})
 
 @app.route("/result")
 def result():
     log_activity("visit_result")
     return render_template("result.html")
+
+@app.route("/get_quiz_data")
+def get_quiz_data():
+    return jsonify(data["final_quiz"])
 
 if __name__ == "__main__":
     app.run(debug=True)
