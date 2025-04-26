@@ -2,7 +2,7 @@
     "lessons": [
         {
             "title": "Stance",
-            "description": "Your feet should be shoulder-width apart. Knees bent. Balance is key.",
+            "description": "",
             "video": "[INSERT VIDEO HERE]",
             "question": "What's the best stance to keep your shot stable and balanced?",
             "options": [
@@ -15,7 +15,7 @@
         },
         {
             "title": "Hand Placement",
-            "description": "Shooting hand under the ball, guide hand on the side.",
+            "description": "",
             "video": "[INSERT VIDEO HERE]",
             "question": "Which hand placement helps you guide the ball without messing up the shot?",
             "options": [
@@ -28,7 +28,7 @@
         },
         {
             "title": "Shooting Motion",
-            "description": "Push up, elbow under the ball, release at the top of your jump.",
+            "description": "",
             "video": "[INSERT VIDEO HERE]",
             "question": "When should you release the basketball for best accuracy and arc?",
             "options": [
@@ -41,7 +41,7 @@
         },
         {
             "title": "Follow Through",
-            "description": "Snap your wrist and hold the gooseneck position.",
+            "description": "",
             "video": "[INSERT VIDEO HERE]",
             "question": "What does a solid follow-through look like?",
             "options": [
@@ -54,7 +54,7 @@
         },
         {
             "title": "Common Mistakes",
-            "description": "Avoid thumbing the ball, leaning back, or not jumping.",
+            "description": "",
             "video": "[INSERT VIDEO HERE]",
             "question": "Which habit messes up your shot form the most?",
             "options": [
@@ -68,7 +68,7 @@
     ],
     "final_quiz": [
         {
-            "q": "What\u2019s a great warm-up before practicing your shot?",
+            "q": "What's a great warm-up before practicing your shot?",
             "options": [
                 "Stretching and balance drills",
                 "3-point shooting only",
@@ -101,7 +101,7 @@
             "key": "Power"
         },
         {
-            "q": "If your shot keeps falling short, what\u2019s most likely the issue?",
+            "q": "If your shot keeps falling short, what's most likely the issue?",
             "options": [
                 "Too much arc",
                 "Not enough leg power",

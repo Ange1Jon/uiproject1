@@ -16,7 +16,31 @@
             border-radius: 4px;
         }
         .correct-answer {
-            background-color: rgba(40, 167, 69, 0.2);
+            background-color: rgba(40, 167, 69, 0.2);  /* light green */
+        }
+        .wrong-answer {
+            background-color: #FF6B6B;  /* red background for wrong answers */
+            color: white;
+        }
+        .navigation-buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .lessons-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .retry-btn {
+            background-color: #007bff;
+            color: white;
         }
         .top-nav {
             display: flex;
@@ -38,6 +62,11 @@
         <h2>Quiz Results</h2>
         <div id="score-display" class="mb-4"></div>
         <div id="quiz-review"></div>
+        
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/'" class="nav-btn lessons-btn">Back to Lessons</button>
+            <button onclick="retakeQuiz()" class="nav-btn retry-btn">Take Quiz Again</button>
+        </div>
     </div>
 
     <script>
@@ -59,9 +88,10 @@
                             <p><strong>Question ${index + 1}:</strong> ${question.q}</p>
                             <div class="options-review">
                                 ${question.options.map((opt, optIndex) => `
-                                    <div class="quiz-option ${optIndex === question.correct ? 'correct-answer' : ''}">
+                                    <div class="quiz-option 
+                                        ${optIndex === question.correct ? 'correct-answer' : ''} 
+                                        ${optIndex === userAnswers[index] && optIndex !== question.correct ? 'wrong-answer' : ''}">
                                         ${opt}
-                                        ${optIndex === question.correct ? ' (Correct Answer)' : ''}
                                     </div>
                                 `).join('')}
                             </div>
@@ -74,6 +104,12 @@
                     console.error('Error:', error);
                     document.getElementById('quiz-review').innerHTML = '<p>Error loading quiz results. Please try again.</p>';
                 });
+        }
+
+        function retakeQuiz() {
+            sessionStorage.removeItem('score');
+            sessionStorage.removeItem('userAnswers');
+            window.location.href = '/quiz/1';
         }
     </script>
 </body>

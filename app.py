@@ -40,12 +40,17 @@ def quiz(quiz_id):
 
 @app.route("/submit_quiz", methods=["POST"])
 def submit_quiz():
-    answers = request.json.get("answers")
-    log_activity("submit_quiz", {"answers": answers})
+    answers = request.json.get("answers", [])
     score = 0
-    for i, answer in enumerate(answers):
+    
+    # Make sure we only process answers up to the number of questions we have
+    num_questions = len(data["final_quiz"])
+    valid_answers = answers[:num_questions]
+    
+    for i, answer in enumerate(valid_answers):
         if answer == data["final_quiz"][i]["correct"]:
             score += 1
+            
     return jsonify({"score": score})
 
 @app.route("/result")
