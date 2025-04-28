@@ -436,3 +436,81 @@
 {"timestamp": "2025-04-25T22:54:57.198170", "action": "visit_quiz", "data": {"quiz_id": 5}}
 {"timestamp": "2025-04-25T22:54:58.360120", "action": "visit_result", "data": null}
 {"timestamp": "2025-04-25T22:55:00.734521", "action": "visit_quiz", "data": {"quiz_id": 1}}
+{"timestamp": "2025-04-27T19:51:36.344092", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T19:51:38.050328", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T19:54:26.891638", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T19:55:10.974130", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:30:30.158310", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:30:43.363767", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:32:05.507827", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:32:10.334325", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:32:35.208411", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:34:14.462368", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:35:06.731708", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:35:08.416815", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:35:09.273199", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T20:35:10.767628", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:36:04.072631", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:37:32.439658", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:37:39.907041", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T20:38:48.439670", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:39:57.337076", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:40:00.011166", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:41:20.983136", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:41:22.194915", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:41:42.950467", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:41:45.646903", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:43:12.710148", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:44:29.565645", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:45:12.778033", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:45:34.288132", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:45:37.395177", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T20:46:03.346554", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:13:03.891040", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:13:16.064666", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:13:25.540383", "action": "visit_lesson", "data": {"lesson_id": 3}}
+{"timestamp": "2025-04-27T21:15:04.034122", "action": "visit_lesson", "data": {"lesson_id": 3}}
+{"timestamp": "2025-04-27T21:15:13.212166", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T21:15:14.579002", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:15:17.429254", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:18:09.322631", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:20:12.524367", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:20:13.645411", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T21:20:26.751113", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:20:37.064194", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:20:46.798327", "action": "visit_lesson", "data": {"lesson_id": 3}}
+{"timestamp": "2025-04-27T21:20:57.045410", "action": "visit_lesson", "data": {"lesson_id": 4}}
+{"timestamp": "2025-04-27T21:21:07.251326", "action": "visit_lesson", "data": {"lesson_id": 5}}
+{"timestamp": "2025-04-27T21:21:19.589918", "action": "visit_quiz", "data": {"quiz_id": 1}}
+{"timestamp": "2025-04-27T21:21:24.116626", "action": "visit_quiz", "data": {"quiz_id": 2}}
+{"timestamp": "2025-04-27T21:21:27.261891", "action": "visit_quiz", "data": {"quiz_id": 3}}
+{"timestamp": "2025-04-27T21:21:34.676285", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T21:23:45.148390", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T21:23:48.841956", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:23:58.572821", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:24:08.903032", "action": "visit_lesson", "data": {"lesson_id": 3}}
+{"timestamp": "2025-04-27T21:24:18.742561", "action": "visit_lesson", "data": {"lesson_id": 4}}
+{"timestamp": "2025-04-27T21:24:28.333797", "action": "visit_lesson", "data": {"lesson_id": 5}}
+{"timestamp": "2025-04-27T21:24:43.621851", "action": "visit_quiz", "data": {"quiz_id": 1}}
+{"timestamp": "2025-04-27T21:31:41.467328", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T21:31:42.874795", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:31:45.436069", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:31:47.534559", "action": "visit_lesson", "data": {"lesson_id": 3}}
+{"timestamp": "2025-04-27T21:31:49.793042", "action": "visit_lesson", "data": {"lesson_id": 4}}
+{"timestamp": "2025-04-27T21:31:52.433144", "action": "visit_lesson", "data": {"lesson_id": 5}}
+{"timestamp": "2025-04-27T21:31:54.697021", "action": "visit_quiz", "data": {"quiz_id": 1}}
+{"timestamp": "2025-04-27T21:32:53.714812", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T21:32:57.193481", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:33:01.017549", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:33:02.741004", "action": "visit_lesson", "data": {"lesson_id": 3}}
+{"timestamp": "2025-04-27T21:33:05.089872", "action": "visit_lesson", "data": {"lesson_id": 4}}
+{"timestamp": "2025-04-27T21:33:07.496097", "action": "visit_lesson", "data": {"lesson_id": 5}}
+{"timestamp": "2025-04-27T21:33:11.270850", "action": "visit_quiz", "data": {"quiz_id": 1}}
+{"timestamp": "2025-04-27T21:33:14.915584", "action": "visit_quiz", "data": {"quiz_id": 2}}
+{"timestamp": "2025-04-27T21:33:18.953025", "action": "visit_quiz", "data": {"quiz_id": 3}}
+{"timestamp": "2025-04-27T21:33:27.437182", "action": "visit_quiz", "data": {"quiz_id": 4}}
+{"timestamp": "2025-04-27T21:33:31.467414", "action": "visit_quiz", "data": {"quiz_id": 5}}
+{"timestamp": "2025-04-27T21:50:35.278024", "action": "visit_home", "data": null}
+{"timestamp": "2025-04-27T21:50:36.620126", "action": "visit_lesson", "data": {"lesson_id": 1}}
+{"timestamp": "2025-04-27T21:50:38.404122", "action": "visit_lesson", "data": {"lesson_id": 2}}
+{"timestamp": "2025-04-27T21:50:40.443711", "action": "visit_home", "data": null}

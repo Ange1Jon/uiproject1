@@ -1,126 +1,126 @@
 {
     "lessons": [
         {
-            "title": "Stance",
+            "title": "Lesson 1 — Bending knees, squaring up",
             "description": "",
-            "video": "[INSERT VIDEO HERE]",
-            "question": "What's the best stance to keep your shot stable and balanced?",
+            "video": "videos/lesson1.mp4",
+            "question": "What's the first step to setting up a balanced basketball shot?",
             "options": [
-                "Feet touching each other",
-                "Feet shoulder-width apart with knees bent",
-                "One foot way ahead of the other",
-                "Standing stiff and tall"
+                "Stand tall with knees locked",
+                "Bend your knees and square your shoulders to the hoop",
+                "Keep feet together and lean forward",
+                "Hold the ball above your head right away"
             ],
             "correct": 1
         },
         {
-            "title": "Hand Placement",
+            "title": "Lesson 2 — Shooting arm at right angle",
             "description": "",
-            "video": "[INSERT VIDEO HERE]",
-            "question": "Which hand placement helps you guide the ball without messing up the shot?",
+            "video": "videos/lesson2.mp4",
+            "question": "Where should your shooting elbow be positioned before you release the ball?",
             "options": [
-                "Both hands under the ball",
-                "Guide hand under, shooting hand on top",
-                "Shooting hand under, guide hand on the side",
-                "Thumbs pressed together in the middle"
+                "Out to the side",
+                "Below your waist",
+                "Right under the ball at a ninety-degree angle",
+                "Behind your back"
             ],
             "correct": 2
         },
         {
-            "title": "Shooting Motion",
+            "title": "Lesson 3 — Hand placement (shooting hand under, guide hand on side)",
             "description": "",
-            "video": "[INSERT VIDEO HERE]",
-            "question": "When should you release the basketball for best accuracy and arc?",
+            "video": "videos/lesson3.mp4",
+            "question": "How should you hold the ball before starting your shooting motion?",
             "options": [
-                "Before jumping",
-                "While falling down",
-                "At the top of your jump",
-                "Right after catching it"
+                "Shooting hand on top, guide hand under",
+                "Both hands gripping from the sides",
+                "Shooting hand under the ball, guide hand on the side",
+                "Cradle the ball against your stomach"
             ],
             "correct": 2
         },
         {
-            "title": "Follow Through",
+            "title": "Lesson 4 — Follow-through (wrist snap, fingers down)",
             "description": "",
-            "video": "[INSERT VIDEO HERE]",
-            "question": "What does a solid follow-through look like?",
+            "video": "videos/lesson4.mp4",
+            "question": "What does a good follow-through look like after you shoot?",
             "options": [
-                "Hands to the side",
-                "Wrists snapped with fingers pointing down like reaching in a cookie jar",
-                "Both hands by your ears",
-                "Straight arms with fists clenched"
+                "Arms stiff by your sides",
+                "Wrists snapped and fingers pointed toward the rim",
+                "Hands waving in the air",
+                "Shoulders leaning backward"
             ],
             "correct": 1
         },
         {
-            "title": "Common Mistakes",
+            "title": "Lesson 5 — Full shot, power from legs",
             "description": "",
-            "video": "[INSERT VIDEO HERE]",
-            "question": "Which habit messes up your shot form the most?",
+            "video": "videos/lesson5.mp4",
+            "question": "Where does most of the power for your shot come from?",
             "options": [
-                "Using your legs for power",
-                "Snapping your wrist",
-                "Leaning backward and thumbing the ball",
-                "Jumping straight up"
+                "Your arms only",
+                "Your shoulders and back",
+                "Your legs and whole body working together",
+                "Just your fingertips"
             ],
             "correct": 2
         }
     ],
     "final_quiz": [
         {
-            "q": "What's a great warm-up before practicing your shot?",
+            "q": "Why is bending your knees important when you're getting ready to shoot?",
             "options": [
-                "Stretching and balance drills",
-                "3-point shooting only",
-                "Jumping jacks only",
-                "Lifting heavy weights"
+                "It gives you better jumping height",
+                "It helps you stay balanced and control your shot",
+                "It makes it easier to run fast",
+                "It keeps your arms loose for passing"
+            ],
+            "correct": 1,
+            "key": "Knee Bend"
+        },
+        {
+            "q": "If your shooting elbow is too far out to the side, what will most likely happen?",
+            "options": [
+                "You'll shoot a straighter shot",
+                "The ball will go left or right instead of straight",
+                "You'll have more power in your shot",
+                "It will help you jump higher"
+            ],
+            "correct": 1,
+            "key": "Elbow Position"
+        },
+        {
+            "q": "What is the main job of your guide hand when you hold the ball?",
+            "options": [
+                "Add extra power to the shot",
+                "Spin the ball while shooting",
+                "Keep the ball steady without pushing it",
+                "Push the ball forward with your fingers"
+            ],
+            "correct": 2,
+            "key": "Guide Hand"
+        },
+        {
+            "q": "What does holding your follow-through after shooting help with?",
+            "options": [
+                "It improves your balance and shooting accuracy",
+                "It helps you run back faster on defense",
+                "It gives more backspin on the ball",
+                "It makes you jump higher"
             ],
             "correct": 0,
-            "key": "Prep"
+            "key": "Follow Through"
         },
         {
-            "q": "What should your eyes focus on when you shoot?",
+            "q": "When taking a jump shot, where should most of your shooting power come from?",
             "options": [
-                "The front of the rim",
-                "The back of the rim",
-                "The ball",
-                "The scoreboard"
+                "Your legs pushing upward through your whole body",
+                "Your wrists snapping really hard",
+                "Your shoulders and arms swinging forward",
+                "Your fingertips flicking the ball as fast as possible"
             ],
-            "correct": 1,
-            "key": "Focus"
-        },
-        {
-            "q": "Which part of the body should generate most of the shooting power?",
-            "options": [
-                "Wrist",
-                "Shoulders",
-                "Legs",
-                "Fingertips"
-            ],
-            "correct": 2,
-            "key": "Power"
-        },
-        {
-            "q": "If your shot keeps falling short, what's most likely the issue?",
-            "options": [
-                "Too much arc",
-                "Not enough leg power",
-                "Too much follow-through",
-                "Focusing on the rim"
-            ],
-            "correct": 1,
-            "key": "Short Shot"
-        },
-        {
-            "q": "Which motion should be smooth and consistent for great shooting?",
-            "options": [
-                "Breathing",
-                "Jumping",
-                "Follow-through",
-                "Dribbling"
-            ],
-            "correct": 2,
-            "key": "Motion"
+            "correct": 0,
+            "key": "Power Source"
         }
     ]
 }

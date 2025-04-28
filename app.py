@@ -4,8 +4,9 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-with open("data.json") as f:
-    data = json.load(f)
+def load_data():
+    with open("data.json") as f:
+        return json.load(f)
 
 # Log user activity
 def log_activity(action, payload=None):
@@ -24,14 +25,17 @@ def home():
 
 @app.route("/learn/<int:lesson_id>")
 def learn(lesson_id):
+    data = load_data()  # Reload data on each request
     if lesson_id < 1 or lesson_id > len(data["lessons"]):
         return redirect(url_for("home"))
     lesson = data["lessons"][lesson_id - 1]
+    print(f"Lesson {lesson_id} video path: {lesson['video']}")  # Debug print
     log_activity("visit_lesson", {"lesson_id": lesson_id})
     return render_template("lesson.html", lesson=lesson, lesson_id=lesson_id, total=len(data["lessons"]))
 
 @app.route("/quiz/<int:quiz_id>")
 def quiz(quiz_id):
+    data = load_data()  # Reload data on each request
     if quiz_id < 1 or quiz_id > len(data["final_quiz"]):
         return redirect(url_for("home"))
     question = data["final_quiz"][quiz_id - 1]
@@ -40,6 +44,7 @@ def quiz(quiz_id):
 
 @app.route("/submit_quiz", methods=["POST"])
 def submit_quiz():
+    data = load_data()  # Reload data on each request
     answers = request.json.get("answers", [])
     score = 0
     
@@ -60,6 +65,7 @@ def result():
 
 @app.route("/get_quiz_data")
 def get_quiz_data():
+    data = load_data()  # Reload data on each request
     return jsonify(data["final_quiz"])
 
 if __name__ == "__main__":
