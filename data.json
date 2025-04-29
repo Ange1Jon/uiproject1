@@ -1,7 +1,7 @@
 {
     "lessons": [
         {
-            "title": "Lesson 1 — Bending knees, squaring up",
+            "title": "Lesson 1",
             "description": "",
             "video": "videos/lesson1.mp4",
             "question": "What's the first step to setting up a balanced basketball shot?",
@@ -14,7 +14,7 @@
             "correct": 1
         },
         {
-            "title": "Lesson 2 — Shooting arm at right angle",
+            "title": "Lesson 2",
             "description": "",
             "video": "videos/lesson2.mp4",
             "question": "Where should your shooting elbow be positioned before you release the ball?",
@@ -27,7 +27,7 @@
             "correct": 2
         },
         {
-            "title": "Lesson 3 — Hand placement (shooting hand under, guide hand on side)",
+            "title": "Lesson 3",
             "description": "",
             "video": "videos/lesson3.mp4",
             "question": "How should you hold the ball before starting your shooting motion?",
@@ -40,7 +40,7 @@
             "correct": 2
         },
         {
-            "title": "Lesson 4 — Follow-through (wrist snap, fingers down)",
+            "title": "Lesson 4",
             "description": "",
             "video": "videos/lesson4.mp4",
             "question": "What does a good follow-through look like after you shoot?",
@@ -53,7 +53,7 @@
             "correct": 1
         },
         {
-            "title": "Lesson 5 — Full shot, power from legs",
+            "title": "Lesson 5",
             "description": "",
             "video": "videos/lesson5.mp4",
             "question": "Where does most of the power for your shot come from?",

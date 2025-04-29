@@ -29,7 +29,6 @@ def learn(lesson_id):
     if lesson_id < 1 or lesson_id > len(data["lessons"]):
         return redirect(url_for("home"))
     lesson = data["lessons"][lesson_id - 1]
-    print(f"Lesson {lesson_id} video path: {lesson['video']}")  # Debug print
     log_activity("visit_lesson", {"lesson_id": lesson_id})
     return render_template("lesson.html", lesson=lesson, lesson_id=lesson_id, total=len(data["lessons"]))
 
