@@ -54,6 +54,7 @@ def submit_quiz():
     for i, answer in enumerate(valid_answers):
         if answer == data["final_quiz"][i]["correct"]:
             score += 1
+        print(f"Question {i+1}: User answer {answer}, Correct answer {data['final_quiz'][i]['correct']}")  # Debug print
             
     return jsonify({"score": score})
 

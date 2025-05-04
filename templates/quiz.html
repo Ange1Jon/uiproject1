@@ -38,17 +38,29 @@
         </form>
     </div>
     <script>
+        // Initialize answers array from sessionStorage or empty array
         let answers = [];
-
+        if ({{ quiz_id }} === 1) {
+            // Clear answers when starting a new quiz
+            sessionStorage.removeItem('quizAnswers');
+            console.log('Starting new quiz - answers cleared');
+        } else {
+            // Load existing answers for subsequent questions
+            answers = JSON.parse(sessionStorage.getItem('quizAnswers') || '[]');
+            console.log('Loading existing answers:', answers);
+        }
+        
         function nextQuestion() {
             const selected = document.querySelector('input[name="quiz"]:checked');
             if (!selected) {
                 alert("Please select an answer");
                 return;
             }
-            answers = JSON.parse(sessionStorage.getItem('quizAnswers') || '[]');
-            answers.push(parseInt(selected.value));
+            const answer = parseInt(selected.value);
+            console.log('Saving answer for question', {{ quiz_id }}, ':', answer);
+            answers[{{ quiz_id - 1 }}] = answer;
             sessionStorage.setItem('quizAnswers', JSON.stringify(answers));
+            console.log('Updated answers:', answers);
             window.location.href = "{{ url_for('quiz', quiz_id=quiz_id+1) }}";
         }
 
@@ -58,8 +70,10 @@
                 alert("Please select an answer");
                 return;
             }
-            answers = JSON.parse(sessionStorage.getItem('quizAnswers') || '[]');
-            answers.push(parseInt(selected.value));
+            const answer = parseInt(selected.value);
+            console.log('Saving final answer for question', {{ quiz_id }}, ':', answer);
+            answers[{{ quiz_id - 1 }}] = answer;
+            console.log('Final answers to submit:', answers);
             
             $.ajax({
                 url: "{{ url_for('submit_quiz') }}",
@@ -106,10 +120,16 @@
             }
         });
 
-        // Load previous answers if they exist
+        // Load previous answer if it exists
         window.onload = function() {
-            const savedAnswers = JSON.parse(sessionStorage.getItem('quizAnswers') || '[]');
-            answers = savedAnswers;
+            console.log('Loading question', {{ quiz_id }}, 'previous answers:', answers);
+            if (answers[{{ quiz_id - 1 }}] !== undefined) {
+                const radio = document.querySelector(`input[value="${answers[{{ quiz_id - 1 }}]}"]`);
+                if (radio) {
+                    radio.checked = true;
+                    radio.closest('.quiz-option').classList.add('selected');
+                }
+            }
         }
     </script>
 </body>
